@@ -27,6 +27,18 @@ void input(){
         cout << "Data ke-" << (i + 1) << " = ";
         cin >> element[i];
     }
+}
 
-
-}   
+void bubbleSortArray(){
+    int pass = 1;
+    do{
+        for(int j = 0; j < nPanjang - 1 - pass; j++){
+            if (element[j] > element[j + 1]){
+                int tempt = element[j];
+                element[j] = element[j + 1];
+                element[j + 1] = tempt;
+            }
+        }
+        pass++;
+    } while (pass <= nPanjang -1);
+}
