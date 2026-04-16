@@ -32,14 +32,14 @@ void input(){
 void bubbleSortArray(){
     int pass = 1;
     do{
-        for(int j = 0; j < nPanjang - 1 - pass; j++){
+        for(int j = 0; j < nPanjang - pass; j++){
             if (element[j] > element[j + 1]){
                 int tempt = element[j];
                 element[j] = element[j + 1];
                 element[j + 1] = tempt;
             }
         }
-        pass++;
+        pass ++;
     } while (pass <= nPanjang -1);
 }
 
@@ -91,7 +91,7 @@ void binarySearch(){
         
         if (low > high)
         {
-            cout << "\n[x] Elemen " << x << "Tidak ditemukan Dalam Array.\n";
+            cout << "\n[x] Elemen " << x << " Tidak ditemukan Dalam Array.\n";
         }
         cout << "\nIngin Mencari Lagi ? (y/n) :";
         cin >> ulang;
